@@ -5,6 +5,8 @@ Código dos cursos:
 
 * [JavaScript Avançado II: ES6, orientação a objetos e padrões de projetos](https://cursos.alura.com.br/course/javascript-es6-orientacao-a-objetos-parte-2)
 
+* [Curso JavaScript Avançado III: ES6, orientação a objetos e padrões de projetos](https://cursos.alura.com.br/course/javascript-es6-orientacao-a-objetos-parte-3)
+
 ## Development Environment Setup:
 1 - Clone this repository<br />
 2 - Run `npm install`<br />

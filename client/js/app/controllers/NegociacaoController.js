@@ -6,9 +6,7 @@ class NegociacaoController {
         this._inputData = $('#data');
         this._inputQuantidade = $('#quantidade');
         this._inputValor = $('#valor');
-
         this._listaNegociacoes = new Bind(new ListaNegociacoes(), new NegociacoesView($('#negociacoesView')), 'adiciona', 'esvazia');
-
         this._mensagem = new Bind(new Mensagem(), new MensagemView($('#mensagemView')), 'texto');
     }
 
@@ -43,7 +41,7 @@ class NegociacaoController {
             this._mensagem.texto = 'Negociações importadas com sucesso';
         }).catch(erro => this._mensagem.texto = erro);
     }
-    
+
     apaga() {
 
         this._listaNegociacoes.esvazia();

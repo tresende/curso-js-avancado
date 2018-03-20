@@ -42,22 +42,24 @@
     <script src="js/app/models/ListaNegociacoes.js"></script>
     <script src="js/app/models/Mensagem.js"></script>
 
-    <!-- Views -->    
+    <!-- Controllers -->
+    <script src="js/app/controllers/NegociacaoController.js"></script>
+
+    <!-- Views -->
     <script src="js/app/views/View.js"></script>
     <script src="js/app/views/NegociacoesView.js"></script>
     <script src="js/app/views/MensagemView.js"></script>
 
-    <!-- Controllers -->    
-    <script src="js/app/controllers/NegociacaoController.js"></script>
-    
-    <!-- Services -->    
+    <!-- Helpers -->
+    <script src="js/app/helpers/Bind.js"></script>
+    <script src="js/app/helpers/DateHelper.js"></script>
+
+    <!-- Services -->
     <script src="js/app/services/HttpService.js"></script>
     <script src="js/app/services/ProxyFactory.js"></script>
     <script src="js/app/services/NegociacaoService.js"></script>
+    <script src="js/app/services/ConnectionFactory.js"></script>
 
-    <!-- Helpers -->    
-    <script src="js/app/helpers/Bind.js"></script>
-    <script src="js/app/helpers/DateHelper.js"></script>
 
     <script>
         let negociacaoController = new NegociacaoController();

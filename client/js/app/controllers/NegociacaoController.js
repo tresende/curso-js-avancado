@@ -30,8 +30,8 @@ class NegociacaoController {
 
         return new Negociacao(
             DateHelper.textoParaData(this._inputData.value),
-            this._inputQuantidade.value,
-            this._inputValor.value);
+            parseInt(this._inputQuantidade.value),
+            parseFloat(this._inputValor.value));
     }
 
     importaNegociacoes() {

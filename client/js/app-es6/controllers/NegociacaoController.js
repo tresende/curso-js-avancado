@@ -91,3 +91,9 @@ export class NegociacaoController {
         this._inputData.focus();
     }
 }
+
+let negociacaoController = new NegociacaoController();
+
+export function currentInstance(){
+    return negociacaoController;
+};

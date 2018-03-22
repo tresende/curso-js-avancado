@@ -5,6 +5,14 @@ class NegociacaoService {
         this._http = new HttpService();
     }
 
+    lista() {
+
+        return ConnectionFactory
+            .getConnection()
+            .then(connection => new NegociacaoDao(connection))
+            .then(dao => dao.listaTodos())
+    }
+
     cadastra(negociacao) {
         return ConnectionFactory
             .getConnection()
@@ -14,6 +22,31 @@ class NegociacaoService {
             .catch(erro => {
                 throw new Error("Não foi possível adicionar a negociação")
             });
+    }
+
+    apaga() {
+
+        return ConnectionFactory
+            .getConnection()
+            .then(connection => new NegociacaoDao(connection))
+            .then(dao => dao.apagaTodos())
+            .then(() => 'Negociações apagadas com sucesso')
+            .catch(erro => {
+                console.log(erro);
+                throw new Error('Não foi possível apagar as negociações')
+            });
+    }
+
+    lista() {
+
+        return ConnectionFactory
+            .getConnection()
+            .then(connection => new NegociacaoDao(connection))
+            .then(dao => dao.listaTodos())
+            .catch(erro => {
+                console.log(erro);
+                throw new Error('Não foi possível obter as negociações')
+            })
     }
 
     obterNegociacoesDaSemana() {

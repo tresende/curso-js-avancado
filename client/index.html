@@ -34,34 +34,12 @@
     <br />
     <br />
     <div id="negociacoesView"></div>
-    <!-- Models -->
-    <script src="js/app/models/Negociacao.js"></script>
-    <script src="js/app/models/ListaNegociacoes.js"></script>
-    <script src="js/app/models/Mensagem.js"></script>
-
-    <!-- Controllers -->
-    <script src="js/app/controllers/NegociacaoController.js"></script>
-
-    <!-- Views -->
-    <script src="js/app/views/View.js"></script>
-    <script src="js/app/views/NegociacoesView.js"></script>
-    <script src="js/app/views/MensagemView.js"></script>
-
-    <!-- Helpers -->
-    <script src="js/app/helpers/Bind.js"></script>
-    <script src="js/app/helpers/DateHelper.js"></script>
-
-    <!-- Services -->
-    <script src="js/app/services/HttpService.js"></script>
-    <script src="js/app/services/ProxyFactory.js"></script>
-    <script src="js/app/services/NegociacaoService.js"></script>
-    <script src="js/app/services/ConnectionFactory.js"></script>
-
-    <!-- Data Access Object -->
-    <script src="js/app/dao/NegociacaoDao.js"></script>
-
+    <script src="node_modules/systemjs/dist/system.js"></script>
     <script>
-        let negociacaoController = new NegociacaoController();
+        System.defaultJSExtensions = true;
+        System.import('js/app/boot').catch(function (err) {
+            console.error(err);
+        });     
     </script>
 </body>
 
